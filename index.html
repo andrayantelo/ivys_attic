@@ -7,29 +7,52 @@
         Edge mode tells IE to display content in the highest mode available.
         -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>Ivy's Attic</title>
         
         <!-- include jquery -->
         <script src="//code.jquery.com/jquery-1.12.4.js"></script>
         
-        <!-- bootstrap, moment, datetimepicker, bootstrap css, datetimepicker css -->
+        <!-- bootstrap, bootstrap css -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>  
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+        <!-- masonry, for pinterest-like thumbnail grid system -->
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         
         <link rel="stylesheet" type="text/css" href="ivys.css">
+        
     </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 img-item"></div>
-            <div class="col-md-3 img-item"></div>
-            <div class="col-md-3 img-item"></div>
-            <div class="col-md-3 img-item"></div>
+    <div class="grid">
+        <div class="grid-item">
+            <a href="#">
+                <img src="couch.jpg" class="img"/>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="#">
+                <img src="couch2.jpg" class="img"/>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="#">
+                <img src="couch3.jpg" class="img"/>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="#">
+                <img src="couch4.jpg" class="img"/>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="#">
+                <img src="couch.jpg" class="img"/>
+            </a>
         </div>
     </div>
     
 </body>
+<script type ="text/javascript" src="ivys.js"></script>
 </html>
