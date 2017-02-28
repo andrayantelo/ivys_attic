@@ -2,3 +2,9 @@
     border: 1px solid black;
     background-color: red;
 }
+
+.grid-item {
+   height: 280px;
+   width: 280px;
+   margin: 10px;
+}
