@@ -4,12 +4,33 @@
 }
 
 .grid-item {
-    margin: 5px;
     display: table;
-    height: 18%;
-    width: 18%
-
 }
+
+@media screen and (min-width: 980px) /* Desktop */ {
+    .grid-item {
+        margin: 5px;
+        height: 18%;
+        width: 18%
+    }
+}
+@media screen and (max-width: 979px) /*tablet*/ {
+    .grid-item {
+        width: 30%;
+        height: 30%;
+    }
+}
+@media screen and (max-width: 500px) /* mobile*/  {
+    .grid-item {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .grid-item {
+        width: 100%;
+    }
+}
+
 
 .thumbnail {
     width: 100%;
