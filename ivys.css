@@ -3,6 +3,10 @@
     background-color: red;
 }
 
+@media screen and (min-width: 980px) /* Desktop */ {}
+@media screen and (max-width: 979px) /*tablet*/ {}
+@media screen and (max-width: 500px) /* mobile*/  {}
+@media screen and (max-width: 320px) {}
 .grid-item {
     margin: 5px;
     display: table;
