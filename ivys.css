@@ -4,7 +4,15 @@
 }
 
 .grid-item {
-   height: 280px;
-   width: 280px;
-   margin: 10px;
+    margin: 5px;
+    display: table;
+    height: 18%;
+    width: 18%
+
+}
+
+.thumbnail {
+    width: 100%;
+    position: relative;
+    display: table-row;
 }
