@@ -5,10 +5,6 @@
     padding: 0;
 }
 
-.tags li {
-    /* Do I really need this? */
-    float: left;
-}
 
 .tag {
   background: #eee;
@@ -43,19 +39,6 @@
 
 .tag:hover::after {
    border-left-color: crimson; 
-}
-
-#gridContainer {
-    padding-top: 70px;
-}
-
-.tagContainer > * {
-    display:inline;
-}
-
-#tagHeader {
-    /*Makes the h5 div only as wide as its contents */
-    display: inline-block;
 }
 
 .tags > li {
