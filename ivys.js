@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     
     var $grid = $('.grid').imagesLoaded( function() {
       // init Isotope after all images have loaded
@@ -15,3 +16,4 @@ $(document).ready(function() {
     });
    
 });		 
+
