@@ -1,7 +1,4 @@
 
-.navbar {
-    height: 80px!important;
-
 .tag {
     list-style: none;
     margin: 0;
@@ -49,6 +46,12 @@
     display: inline-block;
 
 }
+
+
+.navbar {
+    height: 80px!important;
+}
+
 
 .navbar-collapse > * {
     padding-top: 20px!important;
