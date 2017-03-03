@@ -21,6 +21,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         
+        <!-- imagesLoaded plugin -->
+        <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+        
         <!-- Isotope, for pinterest-like thumbnail grid system -->
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
         
@@ -73,21 +76,21 @@
   
   <!-- Content wrapper -->
   
-  <div id="contentWrapper" class="container-fluid">
-    <div class="row">
+  <div id="contentWrapper">
+    <!--<div class="row">
       <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
-          
+     -->     
         <div>
             <h1 class=".page-header">Living Room</h1>
         </div>
         
           <div class="grid">
-              
+            <div class="grid-sizer"></div>
             <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L53209 - Sofa</h4>
                         </div>
                     </div>
@@ -97,8 +100,8 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch2.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch2.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L31609 - Sofa</h4>
                         </div>
                     </div>
@@ -108,8 +111,8 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch3.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch3.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L35709 - Sofa</h4>
                         </div>
                     </div>
@@ -119,8 +122,8 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch4.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch4.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L61809 - Sofa</h4>
                         </div>
                     </div>
@@ -131,20 +134,19 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L53209 - Sofa</h4>
                         </div>
                     </div>
                 </a>
           </div> <!--/.grid-item -->
           
-          <!--
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch2.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch2.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L31609 - Sofa</h4>
                         </div>
                     </div>
@@ -155,8 +157,8 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch3.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch3.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L31609 - Sofa</h4>
                         </div>
                     </div>
@@ -167,8 +169,8 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch4.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch4.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L3705 - Sofa</h4>
                         </div>
                     </div>
@@ -179,8 +181,8 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L53209 - Sofa</h4>
                         </div>
                     </div>
@@ -191,8 +193,8 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch2.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch2.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L31609 - Sofa</h4>
                         </div>
                     </div>
@@ -203,8 +205,8 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch3.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch3.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L35709 - Sofa</h4>
                         </div>
                     </div>
@@ -214,19 +216,18 @@
           <div class="grid-item">
                 <a href="#">
                     <div class="thumbnail">
-                        <img src="couch4.jpg" class="img img-thumbnail"/>
-                        <div class="caption text-center">
+                        <img src="images/couch4.jpg" class="img "/>
+                        <div hidden class="caption text-center">
                             <h4>L81809 - Sofa</h4>
                         </div>
                     </div>
                 </a>
           </div> 
           
-          -->
           
         </div> <!-- ./grid -->
-    </div> <!--.col -->
-  </div> <!--.row -->
+    <!--</div> <!--.col -->
+  <!--</div> <!--.row -->
 </div> <!--/#contentWrapper /.container-fluid -->
 </body>
 <script type ="text/javascript" src="ivys.js"></script>
