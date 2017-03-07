@@ -61,38 +61,24 @@ a.navbar-brand {
 }
 
 
-/*Salvattore CSS */
-
+/*Masonry CSS */
 @media screen and (max-width: 480px){
-	#grid[data-columns]::before {
-		content: '1 .column.size-1of1';
+	.grid-sizer, .grid-item {
+		width: 100%;
 	}
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-	#grid[data-columns]::before {
-		content: '2 .column.size-1of2';
+	.grid-sizer, .grid-item {
+		width: 50%;
 	}
 }
 @media screen and (min-width: 769px) {
-	#grid[data-columns]::before {
-		content: '3 .column.size-1of3';
+	.grid-sizer, .grid-item {
+		width: 25%;
 	}
 }
 
-/* These are the classes that are going to be applied: */
-.column { 
+.grid-item { 
     float: left;
-}
-.size-1of1 { 
-    width: 100%;
-    background: red;
-}
-.size-1of2 { 
-    width: 50%;
-    background: blue;
-}
-.size-1of3 { 
-    width: 33.333%;
-    background: black;
 }
