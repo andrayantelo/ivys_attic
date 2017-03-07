@@ -56,9 +56,10 @@
     padding-top: 20px!important;
 }
 
- a.navbar-brand {
+a.navbar-brand {
     padding-top: 35px;
 }
+
 
 /*Salvattore CSS */
 
@@ -79,8 +80,19 @@
 	}
 }
 
-/* Again, you’re free to use and define the classes: */
-.column { float: left; }
-.size-1of1 { width: 100%; }
-.size-1of2 { width: 50%; }
-.size-1of3 { width: 33.333%; }
+/* These are the classes that are going to be applied: */
+.column { 
+    float: left;
+}
+.size-1of1 { 
+    width: 100%;
+    background: red;
+}
+.size-1of2 { 
+    width: 50%;
+    background: blue;
+}
+.size-1of3 { 
+    width: 33.333%;
+    background: black;
+}

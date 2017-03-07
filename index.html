@@ -24,10 +24,12 @@
         <!-- imagesLoaded plugin -->
         <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
         
-        <!-- Salvattore - jQuery Masonry alternative -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/salvattore/1.0.9/salvattore.min.js"></script>
-
+        <!-- Masonry -->
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        
+        
         <link rel="stylesheet" type="text/css" href="ivys.css">
+        <script type ="text/javascript" src="ivys.js"></script>
         
     </head>
 <body>
@@ -77,11 +79,9 @@
   
   <!-- Content wrapper -->
   
-  <div id="contentWrapper">
-    <!--<div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
-     -->     
-
+  <div id="contentWrapper" class="container-fluid">
+     <div class="row">
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div>
             <h1 class=".page-header">Available Items</h1>
         </div>
@@ -109,13 +109,15 @@
                 </li>
                 
             </ul>
-        </div>
+          </div> <!-- /.col -->
+        </div> <!-- /.tagContainer -->
+    </div> <!-- /.row -->
+    
+    <div class="row">
         
-        <div id="gridContainer">
-          <div class="grid" data-columns>
+          <div class="grid">
             
-            <div class="column"> <!-- COLUMN ONE -->
-                <div>
+                <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
     
@@ -125,7 +127,7 @@
                 </div>
           
           
-              <div>
+              <div class="grid-item">
                   <a href="#">
                       <div class="thumbnail">
 
@@ -134,7 +136,7 @@
                   </a>
               </div>
           
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
     
@@ -143,7 +145,7 @@
                     </a>
                 </div>
           
-                <div>
+                <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
     
@@ -153,7 +155,7 @@
                 </div> 
           
           
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
     
@@ -162,18 +164,15 @@
                     </a>
               </div>
 
-              <div">
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch2.jpg" class="img img-thumbnail"/>
                         </div>
                     </a>
                 </div>
-          </div> <!-- /.column size-1of3 -->
-          
-          
-          <div class="column"> <!-- COLUMN TWO -->
-              <div>
+
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
     
@@ -185,7 +184,7 @@
           
           
               
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch4.jpg" class="img img-thumbnail"/>
@@ -194,7 +193,7 @@
               </div> 
           
               
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch.jpg" class="img img-thumbnail"/>
@@ -203,7 +202,7 @@
               </div> 
               
           
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch2.jpg" class="img img-thumbnail"/>
@@ -212,7 +211,7 @@
               </div> 
           
           
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch3.jpg" class="img img-thumbnail"/>
@@ -220,10 +219,8 @@
                     </a>
               </div> 
 
-          </div> <!-- /.column size-1of3 -->
-          
-          <div class="column"> <!-- COLUMN THREE -->
-              <div>
+
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/bed.jpg" class="img img-thumbnail"/>
@@ -232,7 +229,7 @@
                     </a>
             </div>
           
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch4.jpg" class="img img-thumbnail"/>
@@ -241,7 +238,7 @@
                     </a>
               </div> 
 
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch.jpg" class="img img-thumbnail"/>
@@ -251,7 +248,7 @@
               </div> 
           
               
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch2.jpg" class="img img-thumbnail"/>
@@ -261,7 +258,7 @@
               </div> 
               
               
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch3.jpg" class="img img-thumbnail"/>
@@ -270,7 +267,7 @@
                     </a>
               </div> 
               
-              <div>
+              <div class="grid-item">
                     <a href="#">
                         <div class="thumbnail">
                             <img src="images/couch4.jpg" class="img img-thumbnail"/>
@@ -278,14 +275,13 @@
                         </div>
                     </a>
               </div> 
-          </div> <!-- /.column size-1of3 -->
 
-        </div> <!-- ./grid -->
 
+        </div> <!-- /.row -->
       </div> <!-- /#gridContainer -->
 
 </div> <!--/#contentWrapper /.container-fluid -->
 
 </body>
-<script type ="text/javascript" src="ivys.js"></script>
+
 </html>
