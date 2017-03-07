@@ -1,4 +1,3 @@
-
 .tag {
     list-style: none;
     margin: 0;
@@ -59,34 +58,10 @@
 
  a.navbar-brand {
     padding-top: 35px;
- }
-
-.grid-item {
-    float: left;
-    width: 18%;
 }
 
-@media screen and (min-width: 980px) /* Desktop */ {
-    .grid-item {
-
-    }
+#grid[data-columns]::before {
+	content: '3 .column.size-1of3';
 }
-@media screen and (max-width: 979px) /*tablet*/ {
-    .grid-item {
-
-    }
-}
-@media screen and (max-width: 500px) /* mobile*/  {
-    .grid-item {
-
-    }
-}
-@media screen and (max-width: 320px) {
-    .grid-item {
-
-    }
-}
-
-
 
 
