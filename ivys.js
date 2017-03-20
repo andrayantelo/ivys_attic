@@ -16,6 +16,8 @@ IvyApp.prototype.addItem = function(imageFileName) {
 };
 
 IvyApp.prototype.removeItem = function() {
+    // removes an image from masonry grid
+    
 };
 
 IvyApp.prototype.addTag = function() {
