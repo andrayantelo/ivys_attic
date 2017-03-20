@@ -5,15 +5,14 @@ function IvyApp($grid) {
 };
 
 IvyApp.prototype.addItem = function(imageFileName) {
-    var image =  '<div class="grid-item"><a href="#"><div class="thumbnail">' +
+    var $image =  $('<div class="grid-item"><a href="#"><div class="thumbnail">' +
     '<img src="images/' + imageFileName + '"class="img img-thumbnail"/></div></a>' +
-    '</div>';
+    '</div>');
     
 
-    this.$grid.masonry()
-      .append(image)
-      .masonry( 'appended', image)
-    
+    this.$grid
+      .append($image)
+      .masonry( 'appended', $image)
 };
 
 IvyApp.prototype.removeItem = function() {
