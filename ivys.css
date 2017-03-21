@@ -108,17 +108,16 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 }
 .footer {
   position: absolute;
+  display: block;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 120px;
   clear: both;
-  /*TODO figure out how to make it so that thumbnails don't appear below
-   * footer */
 }
 
 #footer-nav li {
@@ -135,3 +134,6 @@ body {
 .footer, .navbar-default {
   background-color: #778899;
 }
+
+
+
