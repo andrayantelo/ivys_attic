@@ -1,3 +1,8 @@
+/* general css */
+div {
+    display:block;
+}
+
 /*css for tags */
 .tag {
     list-style: none;
@@ -48,9 +53,9 @@
 }
 
 /*css for navbar */
-
-.navbar-default {
-    background-color: #778899;
+.navbar-default .navbar-nav>.active>a, .navbar-default 
+.navbar-nav>.open>a{
+    color: #778899!important;
 }
 
 .navbar a, #magGlass {
@@ -93,4 +98,40 @@ a.navbar-brand {
 
 .grid-item { 
     float: left;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 120px;
+  clear: both;
+  margin-top: 50px;
+}
+
+#footer-nav li {
+ display: inline;
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+#footer-nav li a{
+  color: white!important;
+}
+
+/*blue theme color */
+.footer, .navbar-default {
+  background-color: #778899;
 }
