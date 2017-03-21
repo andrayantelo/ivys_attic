@@ -100,7 +100,6 @@ a.navbar-brand {
     float: left;
 }
 
-
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -118,7 +117,8 @@ body {
   /* Set the fixed height of the footer here */
   height: 120px;
   clear: both;
-  margin-top: 50px;
+  /*TODO figure out how to make it so that thumbnails don't appear below
+   * footer */
 }
 
 #footer-nav li {
