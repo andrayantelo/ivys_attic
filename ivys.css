@@ -1,3 +1,4 @@
+/*css for tags */
 .tag {
     list-style: none;
     margin: 0;
@@ -46,6 +47,15 @@
 
 }
 
+/*css for navbar */
+
+.navbar-default {
+    background-color: #778899;
+}
+
+.navbar a, #magGlass {
+    color: white!important;
+}
 
 .navbar {
     height: 80px!important;
