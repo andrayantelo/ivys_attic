@@ -312,19 +312,31 @@
 
 </div> <!--/#contentWrapper /.container-fluid -->
 
+<div hidden class="before-footer-container container-fluid">
+    <div class="row">
+        <div "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="before-footer-text text-center">
+            IVY'S ATTIC is the premier Furniture Store in the Englewood,
+            Florida area. IVY'S ATTIC offers high quality Furniture at
+            a low price to the Englewood, Florida area.
+            </p>
+        </div> <!-- /.col -->
+    </div> <!-- /.row -->
+</div> <!-- ./container -->
 
 
 <footer class="footer">
-    <div id="#footer-container" class="container-fluid">
+    <div class="footer-container">
         
         
         <div class="footer-item">
             <div class="content-asset">
                 <h4>
                     STORE INFO
-                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-menu-down store-info toggle-arrow"
+                        aria-hidden="true"></span>
                 </h4>
-                <ul class="menu-footer toggle-content">
+                <ul class="menu-footer collapse store-info">
                     <li>
                         <a href="#">About Us</a>
                     </li>
@@ -339,9 +351,10 @@
             <div class="content-asset">
                 <h4>
                     CUSTOMER SERVICE
-                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-menu-down customer-service toggle-arrow"
+                        aria-hidden="true"></span>
                 </h4>
-                <ul class="menu-footer toggle-content">
+                <ul class="menu-footer collapse customer-service">
                     <li>
                         <a href="#">Contact Us</a>
                     </li>
@@ -356,16 +369,22 @@
             <div class="content-asset">
                 <h4>
                     FOLLOW
-                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-menu-down follow toggle-arrow"
+                        aria-hidden="true"></span>
                 </h4>
-                <ul class="menu-footer toggle-content">
+                <ul class="menu-footer collapse follow">
                     <li>
-                  
+                        <a href="#">Facebook</a>
                     </li>
                 </ul> <!--/.menu-footer -->
             </div> <!-- /.content-asset -->
         </div> <!-- /.footer-item -->
-      
+
+        <div class="footer-legal">
+            <div class="content-asset">
+                <div class="copyright">Copyright © 2017 IvysAttic.com. All rights reserved.</div>
+            </div>
+        </div>
       
     </div><!-- /.footer-container -->
 </footer>

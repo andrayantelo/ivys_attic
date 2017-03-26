@@ -2,6 +2,12 @@ function IvyApp($grid) {
     this.$mainGrid = $('#mainGrid');
     this.$grid = $grid;
     
+    this.$menuArrow = $('.toggle-arrow');
+    this.$menuFooter = $('.menu-footer');
+    
+    
+    // Click handlers
+    this.$menuArrow.click(this.toggleMenu);
 };
 
 IvyApp.prototype.addItem = function(imageFileName) {
@@ -26,3 +32,11 @@ IvyApp.prototype.addTag = function() {
 IvyApp.prototype.removeTag = function() {
 };
 
+// Footer menu arrow function 
+IvyApp.prototype.toggleMenu = function() {
+    console.log('clicked');
+    console.log($(this).attr('class'));
+    //$(this).parent().css('color', 'red');
+    //$(this).parent().collapse('toggle');
+    //$arrowSelector.collapse('toggle');
+}
