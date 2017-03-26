@@ -34,10 +34,11 @@ body {
 
 .navbar .navbar-header .navbar-brand {
   display: inline-block;
+  margin-left: 15px;
 }
 
 .navbar-toggle {
-  margin-left: 15px;
+  margin-left: 0px;
 }
 
 .icon-bar {
