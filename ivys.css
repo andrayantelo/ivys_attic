@@ -258,6 +258,14 @@ body {
       width: 32%;
     }
     
+    .footer-container .footer-item .menu-footer {
+      display: initial;
+    }
+    
+    .footer-container .footer-item .toggle-arrow {
+      display: none;
+    }
+    
     .copyright {
       margin-top: 5%;
     }
