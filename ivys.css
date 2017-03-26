@@ -37,8 +37,36 @@ body {
   margin-left: 15px;
 }
 
-.navbar-toggle {
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: #ddd;
+}
+
+.navbar-default .navbar-toggle.collapsed {
   margin-left: 0px;
+  background-color: #778899!important;
+}
+
+.navbar-default .navbar-collapse ul {
+  display: inline-block;
+  padding-left: 0px;
+}
+
+.navbar-default .navbar-collapse ul > li {
+  list-style-type: none;
+  padding: 4px;
+  width: 100%;
+}
+
+.navbar-default .navbar-collapse .form-group {
+  width: 300px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+#favorites-star {
+  margin-right: 8px;
+  margin-top: 8px;
 }
 
 .icon-bar {
