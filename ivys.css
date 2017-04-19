@@ -17,6 +17,20 @@ body {
 /*css for navbar 
 ------------------------------------------------ */
 
+/* center navbar */
+.navbar-brand-centered {
+  position: absolute;
+  left: 50%;
+  display: block;
+  text-align: center;
+}
+.navbar>.container .navbar-brand-centered, 
+.navbar>.container-fluid .navbar-brand-centered {
+  margin-left: -80px!important;
+}
+
+/*end center navbar */
+
 .navbar-default .navbar-nav>.active>a, .navbar-default 
 .navbar-nav>.open>a{
   color: #778899!important;
@@ -248,17 +262,6 @@ body {
 
     .grid-sizer, .grid-item {
       width: 50%;
-    }
-    
-    .navbar-brand-centered {
-        position: absolute;
-        left: 50%;
-        display: block;
-        text-align: center;
-    }
-    .navbar>.container .navbar-brand-centered, 
-    .navbar>.container-fluid .navbar-brand-centered {
-        margin-left: -80px;
     }
     
     #search-bar .form-control {
