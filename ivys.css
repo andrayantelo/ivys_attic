@@ -87,6 +87,10 @@ body {
   margin-top: 8px;
 }
 
+.navbar-left {
+  margin-bottom: 0;
+}
+
 .icon-bar {
   background-color: white!important;
 }
@@ -352,6 +356,22 @@ body {
     }
     .navbar-collapse.collapse {
       display: block!important;
+    }
+   /******************************************/
+   
+   /* Favorites CSS */
+   #favorites-text, #favorites-star {
+     font-size: 1.2em;
+   }
+   #favorites-list-item {
+     margin-top: 3px;
+   }
+   /******************************************/
+   
+   /* Center navbar brand CSS */
+   .navbar>.container .navbar-brand-centered, 
+    .navbar>.container-fluid .navbar-brand-centered {
+      margin-left: -120px!important;
     }
    /******************************************/
 }
