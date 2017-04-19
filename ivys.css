@@ -163,7 +163,7 @@ body {
 }
 
 .footer-container {
-  padding: 1.5625rem 0 2.5rem;
+  padding: 1.5625rem 0 1.5625rem;
 }
 
 .footer-container .footer-item {
@@ -205,8 +205,8 @@ body {
 }
 
 .copyright {
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 /*Masonry CSS */
@@ -328,10 +328,6 @@ body {
       display: none;
     }
     
-    .copyright {
-      margin-top: 5%;
-      margin-bottom: 5%;
-    }
 }
 
 @media (min-width: 960px) {
