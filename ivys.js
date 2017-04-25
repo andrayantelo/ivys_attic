@@ -26,14 +26,55 @@ IvyApp.prototype.removeItem = function() {
     
 };
 
-IvyApp.prototype.addTag = function() {
-};
-
-IvyApp.prototype.removeTag = function() {
-};
-
 // Footer menu arrow function 
 IvyApp.prototype.toggleFooterMenu = function() {
     // Toggles footer menu
     $(this).parent().parent().children('.menu-footer').collapse('toggle');
 }
+
+
+// Product State and Product Class skeletons
+
+var emptyProductState = function(params) {
+    
+    return {
+        // seaWinds Id, SKU number?
+        id: params.seaWindsId,
+        // Product name
+        name: params.name,
+        // product tags
+        tags: [],
+        // Collection name
+        collection: params.collection
+    };
+    
+};
+
+var Product = function(state) {
+    
+    var self = this;
+    self.state = state;
+};
+
+
+Product.prototype.addTag = function() {
+};
+
+Product.prototype.removeTag = function() {
+};
+
+
+// Favorite (starred) items ?
+
+var Favorites = function() {
+    
+    return {
+        //id refers to the product id (SKU?)
+        // array of products' tags
+        id: []
+    };
+    
+};
+
+// Should I make favorites a class? with methods like addItem, removeItem
+// and that's probably it.
