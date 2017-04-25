@@ -1,3 +1,4 @@
+/* blue theme color: #778899 */
 /* general css */
 div {
   display:block;
@@ -158,12 +159,12 @@ body {
 }
 
 .tag:hover {
-  background-color: crimson;
+  background-color: #778899;
   color: white;
 }
 
 .tag:hover::after {
-   border-left-color: crimson; 
+   border-left-color: #778899; 
 }
 
 .tags > li {
