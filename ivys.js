@@ -7,7 +7,7 @@ function IvyApp($grid) {
     
     
     // Click handlers
-    this.$menuArrow.click(this.toggleMenu);
+    this.$menuArrow.click(this.toggleFooterMenu);
 };
 
 IvyApp.prototype.addItem = function(imageFileName) {
@@ -33,10 +33,7 @@ IvyApp.prototype.removeTag = function() {
 };
 
 // Footer menu arrow function 
-IvyApp.prototype.toggleMenu = function() {
-    console.log('clicked');
-    console.log($(this).attr('class'));
-    //$(this).parent().css('color', 'red');
-    //$(this).parent().collapse('toggle');
-    //$arrowSelector.collapse('toggle');
+IvyApp.prototype.toggleFooterMenu = function() {
+    // Toggles footer menu
+    $(this).parent().parent().children('.menu-footer').collapse('toggle');
 }
