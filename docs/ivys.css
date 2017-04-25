@@ -392,11 +392,6 @@ body {
    }
    /******************************************/
    
-   /* Center navbar brand CSS */
-   .navbar>.container .navbar-brand-centered, 
-    .navbar>.container-fluid .navbar-brand-centered {
-      margin-left: -120px!important;
-    }
-   /******************************************/
+
 }
 
