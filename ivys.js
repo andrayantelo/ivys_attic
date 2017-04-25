@@ -34,9 +34,6 @@ IvyApp.prototype.removeTag = function() {
 
 // Footer menu arrow function 
 IvyApp.prototype.toggleMenu = function() {
-    console.log('clicked');
-    console.log($(this).attr('class'));
-    //$(this).parent().css('color', 'red');
-    //$(this).parent().collapse('toggle');
-    //$arrowSelector.collapse('toggle');
+    // Toggles footer menu
+    $(this).parent().parent().children('.menu-footer').collapse('toggle');
 }
