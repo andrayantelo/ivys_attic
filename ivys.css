@@ -348,6 +348,10 @@ body {
 
 
 @media (min-width: 960px) { /*Desktop*/
+
+    .grid-sizer, .grid-item {
+      width: 25%;
+    }
     /*get rid of border lines around search bar*/
     .navbar-form {
       border-top: none;
