@@ -14,6 +14,22 @@ body {
   margin-bottom: 0;
 }
 
+.page-header {
+  color: #778899;
+}
+
+/*About Us page CSS*/
+.about-us-text {
+  padding: 0 8%;
+  font-size: 17px;
+  line-height: 24px;
+  margin-bottom: 25px;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px
+}
 
 /*css for navbar 
 ------------------------------------------------ */
