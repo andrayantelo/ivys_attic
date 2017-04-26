@@ -64,17 +64,15 @@ Product.prototype.removeTag = function() {
 };
 
 
-// Favorite (starred) items ?
 
-var Favorites = function() {
+// Product Collection Class
+
+var ProductCollection = function() {
     
-    return {
-        //id refers to the product id (SKU?)
-        // array of products' tags
-        id: []
-    };
-    
+    var self = this;
+    self.all_products = [];
+    self.favorite_products = [];
+    self.all_tags = [];
+    self.selected_tags = [];
+    self.selected_products = [];
 };
-
-// Should I make favorites a class? with methods like addItem, removeItem
-// and that's probably it.
