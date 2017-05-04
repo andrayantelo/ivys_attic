@@ -37,6 +37,11 @@ body {
 /*css for navbar 
 ------------------------------------------------ */
 
+.navbar-brand {
+    position: relative;
+    z-index: 100;
+}
+
 /* center navbar */
 .navbar-brand-centered {
   position: absolute;
