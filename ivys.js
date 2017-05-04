@@ -43,7 +43,7 @@ var emptyProductState = function(params) {
         // Product name
         name: params.name,
         // product tags
-        tags: [],
+        tags: {},
         // Collection name
         collection: params.collection
     };
@@ -70,9 +70,9 @@ Product.prototype.removeTag = function() {
 var ProductCollection = function() {
     
     var self = this;
-    self.all_products = [];
-    self.favorite_products = [];
-    self.all_tags = [];
-    self.selected_tags = [];
-    self.selected_products = [];
+    self.all_products = {};
+    self.favorite_products = {};
+    self.all_tags = {};
+    self.selected_tags = {};
+    self.selected_products = {};
 };
