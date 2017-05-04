@@ -97,7 +97,7 @@
       </nav>
   </div>
   
-  <!-- About Us Content wrapper -->
+  <!-- Store Content wrapper -->
   
   <div id="contentWrapper" class="container-fluid">
      <div class="row">
@@ -110,11 +110,11 @@
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
     
-        <p class="about-us-text">
+        <p class="page-text">
             IVY'S ATTIC is the premier Furniture Store in the Englewood, Florida area. 
             IVY'S ATTIC offers high quality Furniture at a low price to the Englewood, Florida area.
         </p>
-        <p class="about-us-text">
+        <p class="page-text">
             Our Pledge: <br>
             <br>
             
@@ -129,13 +129,54 @@
             not only will you want to return, but you will refer your friends to us. 
         
         </p>
-        
-        <!-- TODO decide if there will be our "meet our leaders/employees? " section <hr> -->
+
       </div> <!-- /.col -->
     </div> <!-- /.row -->
+           
+   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+
+    <div class="page-header text-center">
+        <h1>Hours and Location</h1>
+    </div>
+           
+    <div id="hoursandlocation" class="row">
+        <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+            
+            <p id="location" class="page-text">
+                <h4>Directions</h4>
+                446 W. Dearborn Street <br>
+                Englewood, Florida 34223 <br>
+                
+                941-474-7435
+            
+                <h4>Hours</h4>
+                Monday - Saturday: 10am - 5pm
+            </p>
+            <div id="map"></div>
+            <script>
+              function initMap() {
+                var uluru = {lat: 26.962397, lng: -82.361719};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 14,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyi2ZxBqjpuYF323Cr5YCKWYGobnnxXO4&callback=initMap">
+            </script>
+            
+        </div> <!-- /.col -->
+    </div>  <!-- /.row -->
+           
     
-        </div> <!-- /.row -->
-      </div> <!-- /#gridContainer -->
+    
+    </div> <!-- /.row -->
+  </div> <!-- /#gridContainer -->
 
 </div> <!--/#contentWrapper /.container-fluid -->
 
@@ -165,7 +206,7 @@
                 </h4>
                 <ul class="menu-footer collapse store-info">
                     <li>
-                        <a href="/docs/aboutus.html">About Us</a>
+                        <a href="/docs/storeinfo.html">About Us</a>
                     </li>
                     <li>
                         <a href="#">Hours & Location</a>
