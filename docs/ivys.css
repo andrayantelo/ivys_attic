@@ -31,6 +31,12 @@ body {
   -webkit-margin-end: 0px
 }
 
+#store-location {
+    width: 100%;
+    height: 100%;
+    float:left;
+}
+
 #map {
     width: 100%;
     height: 400px;
@@ -386,13 +392,13 @@ body {
       border-top: none;
       border-bottom: none;
     }
-    
+
     /*********************/
-    
+
     #search-bar {
       padding: 0;
     }
-    
+
     /*expand navbar */
     .navbar-header {
       float: left!important;
@@ -409,17 +415,29 @@ body {
     .navbar-collapse.collapse {
       display: block!important;
     }
-   /******************************************/
-   
-   /* Favorites CSS */
-   #favorites-text, #favorites-star {
-     font-size: 1.2em;
-   }
-   #favorites-list-item {
-     margin-top: 3px;
-   }
-   /******************************************/
-   
+    /******************************************/
 
+    /* Favorites CSS */
+    #favorites-text, #favorites-star {
+     font-size: 1.2em;
+    }
+    #favorites-list-item {
+     margin-top: 3px;
+    }
+    /******************************************/
+
+    /* Store-info CSS */
+    
+    #map {
+        width: 70%;
+        margin-left: 10px;
+    }
+    
+    #map, #location-text {
+        float: left;
+        margin-right: 10px;
+    }
+    /******************************************/
+   
 }
 
