@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <!-- The X-UA-Compatible meta tag allows web authors to choose what
+        version of Internet Explorer the page should be rendered as.
+        Edge mode tells IE to display content in the highest mode available.
+        -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Ivy's Attic Furniture</title>
+        
+        <!-- include font awesome -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+        <!-- include jquery -->
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        
+        <!-- bootstrap, bootstrap css -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+        <!-- imagesLoaded plugin -->
+        <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+        
+        <!-- Masonry -->
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        
+        
+        <link rel="stylesheet" type="text/css" href="ivys.css">
+        <script type ="text/javascript" src="ivys.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+    
+                var $grid = $('.grid').imagesLoaded( function() {
+                // init masonry after all images have loaded
+                    $grid.masonry({
+                        // options
+                        itemSelector: '.grid-item',
+                        columnWidth: '.grid-sizer',
+                        percentPosition: true
+                    });
+                });
+                
+                ivyapp = new IvyApp($grid);
+            });
+        </script>
+        
+    </head>
+<body>
+
+  <!-- Navbar wrapper -->
+  <div id="navbarWrapper">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#menu-collapse-target" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand navbar-brand-centered"  href="/docs/index.html">Ivy's Attic Furniture</a> 
+            </div>
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="menu-collapse-target">
+                
+              <ul class="navbar-left">
+                  <li id="favorites-list-item">
+                      <a href="#">
+                          <span class="glyphicon glyphicon-star-empty" 
+                              id="favorites-star" aria-hidden="true">
+                          </span>
+                          
+                          <span id="favorites-text">
+                              Favorites
+                          </span>
+                      </a>
+                  </li>
+              </ul>
+              
+              <form class="navbar-form navbar-right" id="search-bar">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <span id="magGlass" class="glyphicon glyphicon-search" aria-hidden="true"></span>
+              </form>
+              
+            </div><!-- /menu-collapse-target -->
+            
+        </div> <!-- /.container-fluid -->
+      </nav>
+  </div>
+  
+  <!-- Content -->
+  
+<div hidden id="main-content" class="container-fluid">
+ <div class="row">
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div id="header-container">
+        <h1 class=".page-header">Available Items</h1>
+    </div>
+
+    <div id="tagContainer">
+        <ul class="tags">
+
+            <li>
+                <a class="tag" href="#">
+                    Sofa <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+
+            </li>
+            <li>
+                <a class="tag" href="#">
+                    Living Room <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+
+            </li>
+            <li>
+                <a class="tag" href="#">
+                    Chair <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+
+            </li>
+            <li>
+                <a class="tag" href="#">
+                    Wood <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+
+            </li>
+            <li>
+                <a class="tag" href="#">
+                    Seating <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+
+            </li>
+
+        </ul>
+      </div> <!-- /.col -->
+    </div> <!-- /.tagContainer -->
+</div> <!-- /.row -->
+
+<div class="row">
+
+      <div class="grid grid-container" id="mainGrid">
+
+        <div class="grid-sizer"></div>
+            <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+
+                        <img src="images/couch.jpg" class="img img-thumbnail"/>
+                    </div>
+                </a>
+            </div>
+
+
+          <div class="grid-item">
+              <a href="#">
+                  <div class="thumbnail">
+
+                      <img src="images/couch2.jpg" class="img img-thumbnail"/>
+                  </div>
+              </a>
+          </div>
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+
+                        <img src="images/couch3.jpg" class="img img-thumbnail"/>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+
+                        <img src="images/couch4.jpg" class="img img-thumbnail"/>
+                    </div>
+                </a>
+            </div> 
+
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+
+                        <img src="images/couch.jpg" class="img img-thumbnail"/>
+                    </div>
+                </a>
+          </div>
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch2.jpg" class="img img-thumbnail"/>
+                    </div>
+                </a>
+            </div>
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+
+                        <img src="images/couch3.jpg" class="img img-thumbnail"/>
+
+                    </div>
+                </a>
+            </div>
+
+
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch4.jpg" class="img img-thumbnail"/>
+                    </div>
+                </a>
+          </div> 
+
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch.jpg" class="img img-thumbnail"/>
+                    </div>
+                </a>
+          </div> 
+
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch2.jpg" class="img img-thumbnail"/>
+                    </div>
+                </a>
+          </div> 
+
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch3.jpg" class="img img-thumbnail"/>
+                    </div>
+                </a>
+          </div> 
+
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/bed.jpg" class="img img-thumbnail"/>
+
+                    </div>
+                </a>
+        </div>
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch4.jpg" class="img img-thumbnail"/>
+
+                    </div>
+                </a>
+          </div> 
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch.jpg" class="img img-thumbnail"/>
+
+                    </div>
+                </a>
+          </div> 
+
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch2.jpg" class="img img-thumbnail"/>
+
+                    </div>
+                </a>
+          </div> 
+
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch3.jpg" class="img img-thumbnail"/>
+
+                    </div>
+                </a>
+          </div> 
+
+          <div class="grid-item">
+                <a href="#">
+                    <div class="thumbnail">
+                        <img src="images/couch4.jpg" class="img img-thumbnail"/>
+
+                    </div>
+                </a>
+          </div> 
+
+
+    </div> <!-- /.row -->
+  </div> <!-- /#gridContainer -->
+
+</div> <!--/#main-content /.container-fluid -->
+
+<!-- End #main-content section -->
+    
+    
+<!-- #store-info Content -->
+
+<div hidden id="store-info" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+        
+      <div class="page-header text-center">
+        <h1>About Us</h1>
+      </div>
+    
+        <p class="page-text">
+            IVY'S ATTIC is the premier Furniture Store in the Englewood, Florida area. 
+            IVY'S ATTIC offers high quality Furniture at a low price to the Englewood, Florida area.
+        </p>
+        <p class="page-text">
+            Our Pledge: <br>
+            <br>
+
+            To provide the best customer service possible. We appreciate
+            your patronage and want to show you that we do. <br>
+            <br>
+
+            To provide professional delivery and pickup service. <br>
+            <br>
+
+            To make shopping at our store so favorable an experience that
+            not only will you want to return, but you will refer your friends to us. 
+
+        </p>
+
+    </div> <!-- /.col -->
+  </div> <!-- /.row -->
+</div> <!-- /#store-info -->
+     
+<div id="contact-us" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+
+      <div class="page-header text-center">
+        <h1>Hours and Location</h1>
+      </div>
+    
+        <div id="store-location">
+
+            <div id="location-text">
+                <h4>Address</h4>
+                <p>
+                    446 W. Dearborn Street <br>
+                    Englewood, Florida 34223 <br>
+
+                    941-474-7435
+
+                    <h4>Hours</h4>
+                    Monday - Saturday: 10am - 5pm
+                
+                   
+                </p>
+            <h5 id="contact-link">
+                <a href="mailto:ivysattic@gmail.com">Contact Us</a>
+            </h5>
+            
+            </div> <!-- /#location-text -->
+
+            <div id="map"></div>
+            <script>
+              function initMap() {
+                var uluru = {lat: 26.962397, lng: -82.361719};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 14,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyi2ZxBqjpuYF323Cr5YCKWYGobnnxXO4&callback=initMap">
+            </script>
+        </div> <!-- /#store-location -->
+            
+    </div> <!-- /.col -->
+  </div>  <!-- /.row -->
+</div> <!--/#contact-us /.container-fluid -->
+    
+    
+<!-- End #store-info content -->
+
+    
+    
+<div hidden class="before-footer-container container-fluid">
+    <div class="row">
+        <div "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="before-footer-text text-center">
+            IVY'S ATTIC is the premier Furniture Store in the Englewood,
+            Florida area. IVY'S ATTIC offers high quality Furniture at
+            a low price to the Englewood, Florida area.
+            </p>
+        </div> <!-- /.col -->
+    </div> <!-- /.row -->
+</div> <!-- ./container -->
+
+
+<footer class="footer">
+    <div class="footer-container">
+        
+        
+        <div class="footer-item">
+            <div class="content-asset">
+                <h4>
+                    STORE INFO
+                    <span class="glyphicon glyphicon-menu-down store-info toggle-arrow"
+                        aria-hidden="true"></span>
+                </h4>
+                <ul class="menu-footer collapse store-info">
+                    <li>
+                        <a href="#store-info">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#store-location">Hours & Location</a>
+                    </li>
+                </ul> <!--/.menu-footer -->
+            </div><!-- /.content-asset -->
+        </div><!--/.footer-item -->
+        
+        <div class="footer-item">
+            <div class="content-asset">
+                <h4>
+                    CUSTOMER SERVICE
+                    <span class="glyphicon glyphicon-menu-down customer-service toggle-arrow"
+                        aria-hidden="true"></span>
+                </h4>
+                <ul class="menu-footer collapse customer-service">
+                    <li>
+                        <a href="#store-location">Contact Us</a>
+                    </li>
+                </ul> <!--/.menu-footer -->
+            </div> <!-- /.content-asset -->
+        </div> <!-- /.footer-item -->
+       
+        <div class="footer-item">
+            <div class="content-asset">
+                <h4>
+                    FOLLOW
+                    <span class="glyphicon glyphicon-menu-down follow toggle-arrow"
+                        aria-hidden="true"></span>
+                </h4>
+                <ul class="menu-footer collapse follow">
+                    <li>
+                        <a href="https://www.facebook.com/IvysAtticDearborn/">Facebook</a>
+                    </li>
+                </ul> <!--/.menu-footer -->
+            </div> <!-- /.content-asset -->
+        </div> <!-- /.footer-item -->
+        
+        </div><!-- /.footer-container -->
+
+        <div class="footer-legal">
+            <div class="content-asset">
+                <div class="copyright">Copyright © 2017 IvysAttic.com. All rights reserved.</div>
+            </div>
+        </div>
+      
+    
+</footer>
+
+
+
+</body>
+
+</html>
