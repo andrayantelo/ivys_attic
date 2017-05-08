@@ -51,7 +51,7 @@ var emptyProductState = function (params) {
         // Product name
         name: params.name,
         // product tags
-        tags: [],
+        tags: {},
         // Collection name
         collection: params.collection
     };
@@ -73,18 +73,14 @@ Product.prototype.removeTag = function () {
     "use strict";
 };
 
+// Product Collection Class
 
-// Favorite (starred) items ?
-
-var Favorites = function () {
+var ProductCollection = function () {
     "use strict";
-    return {
-        //id refers to the product id (SKU?)
-        // array of products' tags
-        id: []
-    };
-    
+    var self = this;
+    self.all_products = {};
+    self.favorite_products = {};
+    self.all_tags = {};
+    self.selected_tags = {};
+    self.selected_products = {};
 };
-
-// Should I make favorites a class? with methods like addItem, removeItem
-// and that's probably it.
