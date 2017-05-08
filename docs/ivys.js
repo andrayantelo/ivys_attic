@@ -1,4 +1,10 @@
+/*jslint devel: true, es5: true, nomen: true*/
+/*global
+    browser:true, Promise, firebase, $, jQuery, alert, moment, Spinner, LocalCalendarStorage, FirebaseCalendarStorage
+*/
+
 function IvyApp($grid) {
+    "use strict";
     this.$mainGrid = $('#mainGrid');
     this.$grid = $grid;
     
@@ -8,35 +14,37 @@ function IvyApp($grid) {
     
     // Click handlers
     this.$menuArrow.click(this.toggleFooterMenu);
-};
+}
 
-IvyApp.prototype.addItem = function(imageFileName) {
+IvyApp.prototype.addItem = function (imageFileName) {
     // adds an image to the masonry grid
-    var $image =  $('<div class="grid-item"><a href="#"><div class="thumbnail">' +
-    '<img src="images/' + imageFileName + '"class="img img-thumbnail"/></div></a>' +
-    '</div>');
+    "use strict";
+    var $image =  $('<div class="grid-item"><a href="#"><div     class="thumbnail">' +
+        '<img src="images/' + imageFileName + '"class="img img-thumbnail"/></div></a>' +
+        '</div>');
     
     this.$grid
-      .append($image)
-      .masonry( 'appended', $image)
+        .append($image)
+        .masonry('appended', $image);
 };
 
-IvyApp.prototype.removeItem = function() {
+IvyApp.prototype.removeItem = function () {
     // removes an image from masonry grid
-    
+    "use strict";
 };
 
 // Footer menu arrow function 
-IvyApp.prototype.toggleFooterMenu = function() {
+IvyApp.prototype.toggleFooterMenu = function () {
     // Toggles footer menu
+    "use strict";
     $(this).parent().parent().children('.menu-footer').collapse('toggle');
-}
+};
 
 
 // Product State and Product Class skeletons
 
-var emptyProductState = function(params) {
-    
+var emptyProductState = function (params) {
+    "use strict";
     return {
         // seaWinds Id, SKU number?
         id: params.seaWindsId,
@@ -50,24 +58,26 @@ var emptyProductState = function(params) {
     
 };
 
-var Product = function(state) {
-    
+var Product = function (state) {
+    "use strict";
     var self = this;
     self.state = state;
 };
 
 
-Product.prototype.addTag = function() {
+Product.prototype.addTag = function () {
+    "use strict";
 };
 
-Product.prototype.removeTag = function() {
+Product.prototype.removeTag = function () {
+    "use strict";
 };
 
 
 // Favorite (starred) items ?
 
-var Favorites = function() {
-    
+var Favorites = function () {
+    "use strict";
     return {
         //id refers to the product id (SKU?)
         // array of products' tags
