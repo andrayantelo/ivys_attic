@@ -98,8 +98,10 @@
   </div>
   
   <!-- Content -->
-  
-<div hidden id="main-content" class="container-fluid">
+
+<div id="content-wrapper">
+    
+<div hidden id="main-content" class="container-fluid content-div">
  <div class="row">
    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div id="header-container">
@@ -320,7 +322,7 @@
     
 <!-- #store-info Content -->
 
-<div hidden id="store-info" class="container-fluid">
+<div hidden id="store-info-content" class="container-fluid content-div">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
         
@@ -352,7 +354,7 @@
   </div> <!-- /.row -->
 </div> <!-- /#store-info -->
      
-<div id="contact-us" class="container-fluid">
+<div id="contact-us-content" class="container-fluid content-div">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
 
@@ -407,7 +409,7 @@
     
 <!-- End #store-info content -->
 
-    
+</div> <!-- /#content-wrapper -->    
     
 <div hidden class="before-footer-container container-fluid">
     <div class="row">
@@ -435,10 +437,10 @@
                 </h4>
                 <ul class="menu-footer collapse store-info">
                     <li>
-                        <a href="#store-info">About Us</a>
+                        <a id="about-us-link" href="#">About Us</a>
                     </li>
                     <li>
-                        <a href="#store-location">Hours & Location</a>
+                        <a id="hours-location-link" href="#">Hours & Location</a>
                     </li>
                 </ul> <!--/.menu-footer -->
             </div><!-- /.content-asset -->
@@ -453,7 +455,7 @@
                 </h4>
                 <ul class="menu-footer collapse customer-service">
                     <li>
-                        <a href="#store-location">Contact Us</a>
+                        <a id="contact-link" href="#">Contact Us</a>
                     </li>
                 </ul> <!--/.menu-footer -->
             </div> <!-- /.content-asset -->

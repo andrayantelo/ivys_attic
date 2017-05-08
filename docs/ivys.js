@@ -11,10 +11,48 @@ function IvyApp($grid) {
     this.$menuArrow = $('.toggle-arrow');
     this.$menuFooter = $('.menu-footer');
     
+    // Footer links
+    this.$aboutUsLink = $('#about-us-link');
+    this.$hoursLocationLink = $('#hours-location-link');
+    this.$contactLink = $('contact-link');
+    
+    this.$contentWrapper = $('#content-wrapper');
+    
+    // Page sections
+    this.$mainContent = $('#main-content');
+    this.$storeInfoContent = $('#store-info-content');
+    this.$contactUsContent = $('#contact-us-content');
     
     // Click handlers
     this.$menuArrow.click(this.toggleFooterMenu);
+    // About Us link
+    this.$aboutUsLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$storeInfoContent);
+    }.bind(this));
+    
+    // Hours & Location link
+    
 }
+
+IvyApp.prototype.hideContent = function () {
+    // Hide all content divs
+    "use strict";
+    var div;
+    $('.content-div').each(function () {
+        $(this).hide();
+    });
+};
+
+IvyApp.prototype.showDiv = function (divToShow) {
+    "use strict";
+    divToShow.show();
+};
+
+IvyApp.prototype.hideDiv = function (divToHide) {
+    "use strict";
+    divToHide.hide();
+};
 
 IvyApp.prototype.addItem = function (imageFileName) {
     // adds an image to the masonry grid
