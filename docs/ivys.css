@@ -41,6 +41,10 @@ body {
     float:left;
 }
 
+#location-text {
+    text-align: center;
+}
+
 #map {
     width: 100%;
     height: 400px;
@@ -437,13 +441,18 @@ body {
     /* Store-info CSS */
     
     #map {
-        width: 70%;
+        width: 65%;
         margin-left: 10px;
+        float: right;
     }
     
     #map, #location-text {
-        float: left;
         margin-right: 10px;
+    }
+    
+    #location-text {
+        padding: 5px;
+        float: left;
     }
     /******************************************/
    
