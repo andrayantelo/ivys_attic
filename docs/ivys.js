@@ -11,16 +11,19 @@ function IvyApp($grid) {
     this.$menuArrow = $('.toggle-arrow');
     this.$menuFooter = $('.menu-footer');
     
+    this.$brandLink = $('#brand-link');
+    
     // Footer links
     this.$aboutUsLink = $('#about-us-link');
     this.$hoursLocationLink = $('#hours-location-link');
-    this.$contactLink = $('contact-link');
+    this.$contactUsLink = $('#contact-us-link');
+    this.$homeLink = $('#home-link');
     
     this.$contentWrapper = $('#content-wrapper');
     
     // Page sections
     this.$mainContent = $('#main-content');
-    this.$storeInfoContent = $('#store-info-content');
+    this.$storeInfoContent = $('#about-us-content');
     this.$contactUsContent = $('#contact-us-content');
     
     // Click handlers
@@ -38,12 +41,22 @@ function IvyApp($grid) {
     }.bind(this));
     
     // Contact Us Link
-    this.$contactLink.click(function () {
+    this.$contactUsLink.click(function () {
         this.hideContent();
         this.showDiv(this.$contactUsContent);
     }.bind(this));
     
     // Home Link (Ivy's Attic Brand Link TODO add Home link in //footer)
+    
+    this.$homeLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$mainContent);
+    }.bind(this));
+    
+    this.$brandLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$mainContent);
+    }.bind(this));
     
 }
 
