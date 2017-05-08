@@ -50,7 +50,7 @@ var emptyProductState = function (params) {
         id: params.seaWindsId,
         // Product name
         name: params.name,
-        // product tags
+        // product tags eg 'tag-name' : 'tag-name' ?
         tags: {},
         // Collection name
         collection: params.collection
@@ -78,9 +78,9 @@ Product.prototype.removeTag = function () {
 var ProductCollection = function () {
     "use strict";
     var self = this;
-    self.all_products = {};
-    self.favorite_products = {};
-    self.all_tags = {};
-    self.selected_tags = {};
-    self.selected_products = {};
+    self.all_products = {}; // sku number : 'product name' ?
+    self.favorite_products = {}; // sku number : 'product name' ?
+    self.all_tags = {}; // 'tag-name' : 'tag-name' ?
+    self.selected_tags = {}; // 'tag-name' : true or false ?
+    self.selected_products = {}; // 'product name' : true or false ?
 };
