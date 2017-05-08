@@ -32,6 +32,18 @@ function IvyApp($grid) {
     }.bind(this));
     
     // Hours & Location link
+    this.$hoursLocationLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$contactUsContent);
+    }.bind(this));
+    
+    // Contact Us Link
+    this.$contactLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$contactUsContent);
+    }.bind(this));
+    
+    // Home Link (Ivy's Attic Brand Link TODO add Home link in //footer)
     
 }
 
