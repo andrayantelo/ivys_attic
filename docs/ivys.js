@@ -16,11 +16,11 @@ function IvyApp($grid) {
     this.$menuArrow.click(this.toggleFooterMenu);
 }
 
-IvyApp.prototype.addItem = function (imageFileName) {
+IvyApp.prototype.addItem = function (imageId, imagePath) {
     // adds an image to the masonry grid
     "use strict";
-    var $image =  $('<div id="' + imageFileName + '"class="grid-item"><a href="#"><div class="thumbnail">' +
-        '<img src="images/' + imageFileName + '"class="img img-thumbnail"/></div></a>' +
+    var $image =  $('<div id="' + imageId + '"class="grid-item"><a href="#"><div class="thumbnail">' +
+        '<img src="' + imagePath + '"class="img img-thumbnail"/></div></a>' +
         '</div>');
     
     this.$grid
@@ -31,10 +31,10 @@ IvyApp.prototype.addItem = function (imageFileName) {
     }.bind(this));
 };
 
-IvyApp.prototype.removeItem = function (imageFileName) {
+IvyApp.prototype.removeItem = function (imageId) {
     // removes an image from masonry grid
     "use strict";
-    var imageElement = document.getElementById(imageFileName);
+    var imageElement = document.getElementById(imageId);
     
     this.$grid.masonry('remove', imageElement);
     
