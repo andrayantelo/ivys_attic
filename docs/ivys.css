@@ -217,6 +217,10 @@ body {
     display: inline-block;
 }
 
+.fa-times {
+    margin-left: 10px;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 
