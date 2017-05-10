@@ -19,7 +19,7 @@ function IvyApp($grid) {
 IvyApp.prototype.addItem = function (imageFileName) {
     // adds an image to the masonry grid
     "use strict";
-    var $image =  $('<div class="grid-item"><a href="#"><div     class="thumbnail">' +
+    var $image =  $('<div id="' + imageFileName + '"class="grid-item"><a href="#"><div class="thumbnail">' +
         '<img src="images/' + imageFileName + '"class="img img-thumbnail"/></div></a>' +
         '</div>');
     
@@ -31,8 +31,27 @@ IvyApp.prototype.addItem = function (imageFileName) {
     }.bind(this));
 };
 
-IvyApp.prototype.removeItem = function () {
+IvyApp.prototype.removeItem = function (imageFileName) {
     // removes an image from masonry grid
+    "use strict";
+    var imageElement = document.getElementById(imageFileName);
+    
+    this.$grid.masonry('remove', imageElement);
+    
+    $('.grid').imagesLoaded(function () {
+        this.$grid.masonry('layout');
+    }.bind(this));
+};
+
+IvyApp.prototype.removeCollection = function () {
+    // Removes images based on if they are a Product 
+    // from a certain collection, or they have a certain tag
+    "use strict";
+};
+
+IvyApp.prototype.addCollection = function () {
+    // Add images based on if they are a Product from
+    // a certain collection, or they have a certain tag
     "use strict";
 };
 
@@ -57,6 +76,8 @@ var emptyProductState = function (params) {
         tags: {},
         // Collection name
         collection: params.collection
+        // Should I also include the image in here? 
+        // I mean the filename for the image of this product?
     };
     
 };
