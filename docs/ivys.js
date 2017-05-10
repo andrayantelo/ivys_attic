@@ -24,8 +24,11 @@ IvyApp.prototype.addItem = function (imageFileName) {
         '</div>');
     
     this.$grid
-        .append($image)
-        .masonry('appended', $image);
+        .append($image);
+    
+    $('.grid').imagesLoaded(function () {
+        this.$grid.masonry('appended', $image);
+    }.bind(this));
 };
 
 IvyApp.prototype.removeItem = function () {
