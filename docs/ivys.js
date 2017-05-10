@@ -33,13 +33,15 @@ IvyApp.prototype.addItem = function (imageFileName) {
 IvyApp.prototype.removeItem = function () {
     // removes an image from masonry grid
     "use strict";
+    
 };
 
 IvyApp.prototype.addTag = function (tagName) {
     // Add a tag to the page
     "use strict";
     var tagElement = '<li><a class="tag" href="#">' +
-        tagName + '<i class="fa fa-times" aria-hidden="true"></i> \
+        tagName +
+        '<i class="fa fa-times" aria-hidden="true"></i> \
         </a></li>';
     this.$tagList.append(tagElement);
 };
@@ -47,6 +49,7 @@ IvyApp.prototype.addTag = function (tagName) {
 IvyApp.prototype.removeTag = function () {
     // Remove a tag from the page
     "use strict";
+    // Should I remove by tag name?
 };
 
 // Footer menu arrow function 
