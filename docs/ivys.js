@@ -16,6 +16,51 @@ function IvyApp($grid) {
     this.$menuArrow.click(this.toggleFooterMenu);
 }
 
+IvyApp.prototype.initFirebase = function () {
+    "use strict";
+    // Shortcuts to Firebase SDK features.
+    this.auth = firebase.auth();
+    this.storage = firebase.storage();
+    
+    // Logs debugging information to the console.
+    firebase.database.enableLogging(false);
+    
+    // Initiates Firebase auth and listen to auth state changes.
+    this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
+
+};
+
+IvyApp.prototype.signIn = function () {
+    // Sign in Firebase using popup auth and Google as the identity provider.
+    "use strict";
+    
+    this.auth.signInAnonymously().catch(function (error) {
+        var errorCode = error.code,
+            errorMessage = error.message;
+        
+    });
+};
+
+IvyApp.prototype.onAuthStateChanged(function (user) {
+    "use strict";
+    if (user) {
+        // User is signed in.
+        var isAnonymous = user.isAnonymous,
+            uid = user.uid;
+        // Fill favorites with user's favorites
+    } else {
+        // User is signed out.
+        // Clear favorites
+    }
+});
+
+IvyApp.addToFavorites = function () {
+    // Add a product to favorite's list
+    // sign in user anonymously
+    "use strict";
+    this.signIn();
+};
+
 IvyApp.prototype.addItem = function (imageFileName) {
     // adds an image to the masonry grid
     "use strict";
