@@ -6,7 +6,7 @@
 function IvyApp($grid) {
     "use strict";
     this.$mainGrid = $('#mainGrid');
-    this.$grid = $grid;
+    //this.$grid = $grid;
     
     this.$menuArrow = $('.toggle-arrow');
     this.$menuFooter = $('.menu-footer');
@@ -21,6 +21,7 @@ IvyApp.prototype.initFirebase = function () {
     // Shortcuts to Firebase SDK features.
     this.auth = firebase.auth();
     this.storage = firebase.storage();
+    this.storageRef = this.storage.ref();
     
     // Logs debugging information to the console.
     firebase.database.enableLogging(false);
@@ -41,20 +42,22 @@ IvyApp.prototype.signIn = function () {
     });
 };
 
-IvyApp.prototype.onAuthStateChanged(function (user) {
+IvyApp.prototype.onAuthStateChanged = function (user) {
     "use strict";
     if (user) {
         // User is signed in.
         var isAnonymous = user.isAnonymous,
             uid = user.uid;
+        console.log("user is signed in " + uid);
         // Fill favorites with user's favorites
     } else {
         // User is signed out.
         // Clear favorites
+        console.log("User is signed out");
     }
-});
+};
 
-IvyApp.addToFavorites = function () {
+IvyApp.prototype.addToFavorites = function () {
     // Add a product to favorite's list
     // sign in user anonymously
     "use strict";

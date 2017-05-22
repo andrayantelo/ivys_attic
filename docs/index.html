@@ -48,6 +48,9 @@
         
         <script>
             $(document).ready(function() {
+                
+                ivyapp = new IvyApp();
+                ivyapp.initFirebase();
     
                 var $grid = $('.grid').imagesLoaded( function() {
                 // init masonry after all images have loaded
@@ -59,7 +62,7 @@
                     });
                 });
                 
-                ivyapp = new IvyApp($grid);
+                ivyapp.$grid = $grid;
             });
         </script>
         
