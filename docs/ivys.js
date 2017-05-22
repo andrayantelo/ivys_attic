@@ -75,9 +75,9 @@ var emptyProductState = function (params) {
         // product tags
         tags: {},
         // Collection name
-        collection: params.collection
-        // Should I also include the image in here? 
-        // I mean the filename for the image of this product?
+        collection: params.collection,
+        // Image link
+        imgLink: params.link
     };
     
 };
