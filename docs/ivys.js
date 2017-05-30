@@ -26,6 +26,7 @@ IvyApp.prototype.addItem = function (imageId, imagePath) {
     this.$grid
         .append($image);
     
+    // Re-layout the images on the page
     $('.grid').imagesLoaded(function () {
         this.$grid.masonry('appended', $image);
     }.bind(this));
@@ -38,6 +39,7 @@ IvyApp.prototype.removeItem = function (imageId) {
     
     this.$grid.masonry('remove', imageElement);
     
+    // Re-layout the images on the page
     $('.grid').imagesLoaded(function () {
         this.$grid.masonry('layout');
     }.bind(this));
