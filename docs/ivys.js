@@ -63,20 +63,44 @@ IvyApp.prototype.addToFavorites = function () {
     "use strict";
 };
 
-IvyApp.prototype.addItem = function (imageFileName) {
+IvyApp.prototype.addItem = function (imageId, imagePath) {
     // adds an image to the masonry grid
     "use strict";
-    var $image =  $('<div class="grid-item"><a href="#"><div     class="thumbnail">' +
-        '<img src="images/' + imageFileName + '"class="img img-thumbnail"/></div></a>' +
+    var $image =  $('<div id="' + imageId + '"class="grid-item"><a href="#"><div class="thumbnail">' +
+        '<img src="' + imagePath + '"class="img img-thumbnail"/></div></a>' +
         '</div>');
     
     this.$grid
-        .append($image)
-        .masonry('appended', $image);
+        .append($image);
+    
+    // Re-layout the images on the page
+    $('.grid').imagesLoaded(function () {
+        this.$grid.masonry('appended', $image);
+    }.bind(this));
 };
 
-IvyApp.prototype.removeItem = function () {
+IvyApp.prototype.removeItem = function (imageId) {
     // removes an image from masonry grid
+    "use strict";
+    var imageElement = document.getElementById(imageId);
+    
+    this.$grid.masonry('remove', imageElement);
+    
+    // Re-layout the images on the page
+    $('.grid').imagesLoaded(function () {
+        this.$grid.masonry('layout');
+    }.bind(this));
+};
+
+IvyApp.prototype.removeCollection = function () {
+    // Removes images based on if they are a Product 
+    // from a certain collection, or they have a certain tag
+    "use strict";
+};
+
+IvyApp.prototype.addCollection = function () {
+    // Add images based on if they are a Product from
+    // a certain collection, or they have a certain tag
     "use strict";
 };
 
@@ -100,7 +124,9 @@ var emptyProductState = function (params) {
         // product tags eg 'tag-name' : 'tag-name' ?
         tags: {},
         // Collection name
-        collection: params.collection
+        collection: params.collection,
+        // Image link
+        imgLink: params.link
     };
     
 };
