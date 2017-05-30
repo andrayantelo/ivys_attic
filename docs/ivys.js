@@ -101,8 +101,11 @@ var ProductCollection = function () {
     self.all_products = {}; // sku number : 'product name'
     // Products in the collection the user favorited
     self.favorite_products = {}; // sku number : 'product name'
+    // All tags associated with all the products in this collection
     self.all_tags = {}; // 'tag-id' : 'tag-name'
+    // The currently selected tags that are displayed on the webpage
     self.selected_tags = {}; // 'tag-name' : true or false
+    // The products associated with the selected_tags
     self.selected_products = {}; // 'product SKU number' : true or false
 };
 
