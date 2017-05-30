@@ -11,6 +11,8 @@ function IvyApp($grid) {
     this.$menuArrow = $('.toggle-arrow');
     this.$menuFooter = $('.menu-footer');
     
+    this.$tagList = $('#tagList');
+    
     
     // Click handlers
     this.$menuArrow.click(this.toggleFooterMenu);
@@ -66,6 +68,9 @@ IvyApp.prototype.addToFavorites = function () {
 
 IvyApp.prototype.addItem = function (imageId, imagePath) {
     // adds an image to the masonry grid
+    // Should not be able to add image if it is already on the page
+    // Might be something that is implemented wherever addItem is used before 
+    // calling addItem TODO
     "use strict";
     var $image =  $('<div id="' + imageId + '"class="grid-item"><a href="#"><div class="thumbnail">' +
         '<img src="' + imagePath + '"class="img img-thumbnail"/></div></a>' +
@@ -91,6 +96,24 @@ IvyApp.prototype.removeItem = function (imageId) {
     $('.grid').imagesLoaded(function () {
         this.$grid.masonry('layout');
     }.bind(this));
+};
+
+IvyApp.prototype.addTag = function (tagId, tagObject) {
+    // Add a tag to the page by Id
+    // tagObject is the object containing all the tags
+    "use strict";
+    var tagElement = '<li id="' + tagId + '"><a class="tag" href="#">' +
+        tagObject[tagId] +
+        '<i class="fa fa-times" aria-hidden="true"></i> \
+        </a></li>';
+    this.$tagList.append(tagElement);
+};
+
+IvyApp.prototype.removeTag = function (tagId) {
+    // Remove a tag from the page
+    "use strict";
+    // Remove by tag Id
+    this.tagList.find('#' + tagId).remove();
 };
 
 IvyApp.prototype.removeCollection = function () {
