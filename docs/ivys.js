@@ -73,12 +73,12 @@ var Product = function (state) {
 
 
 Product.prototype.addTag = function () {
-    // Add tag associated with product to products' state
+    // Add tag associated with product to product's state
     "use strict";
 };
 
 Product.prototype.removeTag = function () {
-    // Remove tag associated with product from products' state
+    // Remove tag associated with product from product's state
     "use strict";
 };
 
