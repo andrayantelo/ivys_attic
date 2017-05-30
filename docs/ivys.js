@@ -53,7 +53,7 @@ IvyApp.prototype.onAuthStateChanged = function (user) {
         // Fill favorites with user's favorites
     } else {
         // User is signed out.
-        // Clear favorites
+        // Clear favorites TODO
         console.log("User is signed out");
     }
 };
