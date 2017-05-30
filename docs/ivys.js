@@ -36,20 +36,22 @@ IvyApp.prototype.removeItem = function () {
     
 };
 
-IvyApp.prototype.addTag = function (tagName) {
-    // Add a tag to the page
+IvyApp.prototype.addTag = function (tagId, tagObject) {
+    // Add a tag to the page by Id
+    // tagObject is the object containing all the tags
     "use strict";
-    var tagElement = '<li><a class="tag" href="#">' +
-        tagName +
+    var tagElement = '<li id="' + tagId + '"><a class="tag" href="#">' +
+        tagObject[tagId] +
         '<i class="fa fa-times" aria-hidden="true"></i> \
         </a></li>';
     this.$tagList.append(tagElement);
 };
 
-IvyApp.prototype.removeTag = function () {
+IvyApp.prototype.removeTag = function (tagId) {
     // Remove a tag from the page
     "use strict";
-    // Should I remove by tag name?
+    // Remove by tag Id
+    this.tagList.find('#' + tagId).remove();
 };
 
 // Footer menu arrow function 
