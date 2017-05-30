@@ -6,7 +6,7 @@
 function IvyApp($grid) {
     "use strict";
     this.$mainGrid = $('#mainGrid');
-    //this.$grid = $grid;
+    this.$grid = $grid;
     
     this.$menuArrow = $('.toggle-arrow');
     this.$menuFooter = $('.menu-footer');
@@ -32,13 +32,14 @@ IvyApp.prototype.initFirebase = function () {
 };
 
 IvyApp.prototype.signIn = function () {
-    // Sign in Firebase using popup auth and Google as the identity provider.
+    // Sign a user in anonymously
     "use strict";
     
     this.auth.signInAnonymously().catch(function (error) {
         var errorCode = error.code,
             errorMessage = error.message;
-        
+        console.error("Error signing in " + errorMessage);
+        return errorCode;
     });
 };
 
@@ -59,9 +60,7 @@ IvyApp.prototype.onAuthStateChanged = function (user) {
 
 IvyApp.prototype.addToFavorites = function () {
     // Add a product to favorite's list
-    // sign in user anonymously
     "use strict";
-    this.signIn();
 };
 
 IvyApp.prototype.addItem = function (imageFileName) {

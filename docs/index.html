@@ -49,9 +49,6 @@
         <script>
             $(document).ready(function() {
                 
-                ivyapp = new IvyApp();
-                ivyapp.initFirebase();
-    
                 var $grid = $('.grid').imagesLoaded( function() {
                 // init masonry after all images have loaded
                     $grid.masonry({
@@ -62,7 +59,11 @@
                     });
                 });
                 
-                ivyapp.$grid = $grid;
+                ivyapp = new IvyApp($grid);
+                // Sign in user anonymously
+                ivyapp.signIn();
+                // Initialize firebase
+                ivyapp.initFirebase();
             });
         </script>
         
