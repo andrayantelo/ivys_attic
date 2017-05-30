@@ -53,11 +53,11 @@ IvyApp.prototype.toggleFooterMenu = function () {
 var emptyProductState = function (params) {
     "use strict";
     return {
-        // seaWinds Id, SKU number?
-        id: params.seaWindsId,
+        // SKU number
+        id: params.skuNumber,
         // Product name
         name: params.name,
-        // product tags eg 'tag-id' : 'tag-name' ?
+        // product tags eg 'tag-id' : 'tag-name'
         tags: {},
         // Collection name
         collection: params.collection
@@ -72,22 +72,31 @@ var Product = function (state) {
 };
 
 
-Product.prototype.addTag = function () {
+Product.prototype.addTag = function (tagId, tagName) {
     // Add tag associated with product to product's state
     "use strict";
+    var self = this;
+    self.state.tags[tagId] = tagName;
 };
 
-Product.prototype.removeTag = function () {
+Product.prototype.removeTag = function (tagId) {
     // Remove tag associated with product from product's state
     "use strict";
+    var self = this;
+    delete self.state.tags[tagId];
 };
 
 // Product Collection Class
+// Example Maui-Collection, Milan Collection, etc
+
+// Should ProduceCollection have a State the way the Product class does? TODO
 
 var ProductCollection = function () {
     "use strict";
     var self = this;
+    // All products in this Collection
     self.all_products = {}; // sku number : 'product name'
+    
     self.favorite_products = {}; // sku number : 'product name'
     self.all_tags = {}; // 'tag-id' : 'tag-name'
     self.selected_tags = {}; // 'tag-name' : true or false
