@@ -20,6 +20,9 @@ function IvyApp($grid) {
 
 IvyApp.prototype.addItem = function (imageId, imagePath) {
     // adds an image to the masonry grid
+    // Should not be able to add image if it is already on the page
+    // Might be something that is implemented wherever addItem is used before 
+    // calling addItem TODO
     "use strict";
     var $image =  $('<div id="' + imageId + '"class="grid-item"><a href="#"><div class="thumbnail">' +
         '<img src="' + imagePath + '"class="img img-thumbnail"/></div></a>' +
