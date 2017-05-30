@@ -90,6 +90,7 @@ Product.prototype.removeTag = function (tagId) {
 
 // Product Collection Class
 // Example Maui-Collection, Milan Collection, etc
+// Or is this the collection of products that the user is viewing/last viewed? 
 
 // Should ProduceCollection have a State the way the Product class does? TODO
 
