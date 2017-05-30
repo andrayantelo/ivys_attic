@@ -60,7 +60,9 @@ var emptyProductState = function (params) {
         // product tags eg 'tag-id' : 'tag-name'
         tags: {},
         // Collection name
-        collection: params.collection
+        collection: params.collection,
+        // Favorite status
+        favorite: false //true or false
     };
     
 };
@@ -94,9 +96,10 @@ Product.prototype.removeTag = function (tagId) {
 var ProductCollection = function () {
     "use strict";
     var self = this;
+    
     // All products in this Collection
     self.all_products = {}; // sku number : 'product name'
-    
+    // Products in the collection the user favorited
     self.favorite_products = {}; // sku number : 'product name'
     self.all_tags = {}; // 'tag-id' : 'tag-name'
     self.selected_tags = {}; // 'tag-name' : true or false
