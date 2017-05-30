@@ -90,8 +90,8 @@ var ProductCollection = function () {
     self.all_products = {}; // sku number : 'product name'
     self.favorite_products = {}; // sku number : 'product name'
     self.all_tags = {}; // 'tag-id' : 'tag-name'
-    self.selected_tags = {}; // 'tag-name' : true or false ?
-    self.selected_products = {}; // 'product name' : true or false ?
+    self.selected_tags = {}; // 'tag-name' : true or false
+    self.selected_products = {}; // 'product SKU number' : true or false
 };
 
 ProductCollection.prototype.generateAllTags = function () {
