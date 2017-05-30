@@ -3,6 +3,14 @@
     browser:true, Promise, firebase, $, jQuery, alert, moment, Spinner, LocalCalendarStorage, FirebaseCalendarStorage
 */
 
+// Helper functions for IvyApp, Product, and ProductCollection classes
+var generateUniqueId = function () {
+    // Unique Ids for tags
+    "use strict";
+    var uniqueId = (Math.floor((Math.random() + Date.now()) * 10e4)).toString();
+    return uniqueId;
+};
+
 function IvyApp($grid) {
     "use strict";
     this.$mainGrid = $('#mainGrid');
@@ -40,7 +48,6 @@ IvyApp.prototype.toggleFooterMenu = function () {
     $(this).parent().parent().children('.menu-footer').collapse('toggle');
 };
 
-
 // Product State and Product Class skeletons
 
 var emptyProductState = function (params) {
@@ -50,7 +57,7 @@ var emptyProductState = function (params) {
         id: params.seaWindsId,
         // Product name
         name: params.name,
-        // product tags eg 'tag-name' : 'tag-name' ?
+        // product tags eg 'tag-id' : 'tag-name' ?
         tags: {},
         // Collection name
         collection: params.collection
@@ -66,10 +73,12 @@ var Product = function (state) {
 
 
 Product.prototype.addTag = function () {
+    // Add tag associated with product to products' state
     "use strict";
 };
 
 Product.prototype.removeTag = function () {
+    // Remove tag associated with product from products' state
     "use strict";
 };
 
@@ -80,7 +89,13 @@ var ProductCollection = function () {
     var self = this;
     self.all_products = {}; // sku number : 'product name' ?
     self.favorite_products = {}; // sku number : 'product name' ?
-    self.all_tags = {}; // 'tag-name' : 'tag-name' ?
+    self.all_tags = {}; // 'tag-id' : 'tag-name'
     self.selected_tags = {}; // 'tag-name' : true or false ?
     self.selected_products = {}; // 'product name' : true or false ?
+};
+
+ProductCollection.prototype.generateAllTags = function () {
+    // Goes through every product in all_products and adds their 
+    // tags to all_tags. No duplicates
+    "use strict";
 };
