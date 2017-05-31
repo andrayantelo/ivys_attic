@@ -18,6 +18,9 @@ function IvyApp($grid) {
     this.$menuArrow.click(this.toggleFooterMenu);
 }
 
+// IvyApp object that stores information about whether or not
+// an image is on the page or not. TODO
+
 IvyApp.prototype.addItem = function (imageId, imagePath) {
     // adds an image to the masonry grid
     // Should not be able to add image if it is already on the page
