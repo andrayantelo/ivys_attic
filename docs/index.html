@@ -29,10 +29,28 @@
         
         
         <link rel="stylesheet" type="text/css" href="ivys.css">
+        
+        <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBDuaJc6yyQ-_7DJPblAj-85W7xOu1Zs9Q",
+            authDomain: "ivys-attic.firebaseapp.com",
+            databaseURL: "https://ivys-attic.firebaseio.com",
+            projectId: "ivys-attic",
+            storageBucket: "ivys-attic.appspot.com",
+            messagingSenderId: "433031972233"
+          };
+          firebase.initializeApp(config);
+        </script>
+        
         <script type ="text/javascript" src="ivys.js"></script>
         
         <script>
             $(document).ready(function() {
+                
+                ivyapp = new IvyApp();
+                ivyapp.initFirebase();
     
                 var $grid = $('.grid').imagesLoaded( function() {
                 // init masonry after all images have loaded
@@ -44,7 +62,7 @@
                     });
                 });
                 
-                ivyapp = new IvyApp($grid);
+                ivyapp.$grid = $grid;
             });
         </script>
         
@@ -153,164 +171,165 @@
       <div class="grid grid-container" id="mainGrid">
 
         <div class="grid-sizer"></div>
-            <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
+          
+        <div id="couch.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
 
-                        <img src="images/couch.jpg" class="img img-thumbnail"/>
-                    </div>
-                </a>
-            </div>
-
-
-          <div class="grid-item">
-              <a href="#">
-                  <div class="thumbnail">
-
-                      <img src="images/couch2.jpg" class="img img-thumbnail"/>
-                  </div>
-              </a>
-          </div>
-
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-
-                        <img src="images/couch3.jpg" class="img img-thumbnail"/>
-                    </div>
-                </a>
-            </div>
-
-            <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-
-                        <img src="images/couch4.jpg" class="img img-thumbnail"/>
-                    </div>
-                </a>
-            </div> 
-
-
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-
-                        <img src="images/couch.jpg" class="img img-thumbnail"/>
-                    </div>
-                </a>
-          </div>
-
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch2.jpg" class="img img-thumbnail"/>
-                    </div>
-                </a>
-            </div>
-
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-
-                        <img src="images/couch3.jpg" class="img img-thumbnail"/>
-
-                    </div>
-                </a>
-            </div>
-
-
-
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch4.jpg" class="img img-thumbnail"/>
-                    </div>
-                </a>
-          </div> 
-
-
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch.jpg" class="img img-thumbnail"/>
-                    </div>
-                </a>
-          </div> 
-
-
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch2.jpg" class="img img-thumbnail"/>
-                    </div>
-                </a>
-          </div> 
-
-
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch3.jpg" class="img img-thumbnail"/>
-                    </div>
-                </a>
-          </div> 
-
-
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/bed.jpg" class="img img-thumbnail"/>
-
-                    </div>
-                </a>
+                    <img src="images/couch.jpg" class="img img-thumbnail"/>
+                </div>
+            </a>
         </div>
 
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch4.jpg" class="img img-thumbnail"/>
 
-                    </div>
-                </a>
-          </div> 
+      <div id="couch2.jpg" class="grid-item">
+          <a href="#">
+              <div class="thumbnail">
 
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch.jpg" class="img img-thumbnail"/>
+                  <img src="images/couch2.jpg" class="img img-thumbnail"/>
+              </div>
+          </a>
+      </div>
 
-                    </div>
-                </a>
-          </div> 
+      <div id="couch3.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+
+                    <img src="images/couch3.jpg" class="img img-thumbnail"/>
+                </div>
+            </a>
+        </div>
+
+        <div id="couch4.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+
+                    <img src="images/couch4.jpg" class="img img-thumbnail"/>
+                </div>
+            </a>
+        </div> 
 
 
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch2.jpg" class="img img-thumbnail"/>
+      <div id="couch5.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
 
-                    </div>
-                </a>
-          </div> 
+                    <img src="images/couch.jpg" class="img img-thumbnail"/>
+                </div>
+            </a>
+      </div>
+
+      <div id="couch6.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch2.jpg" class="img img-thumbnail"/>
+                </div>
+            </a>
+        </div>
+
+      <div id="couch7.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+
+                    <img src="images/couch3.jpg" class="img img-thumbnail"/>
+
+                </div>
+            </a>
+        </div>
 
 
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch3.jpg" class="img img-thumbnail"/>
 
-                    </div>
-                </a>
-          </div> 
+      <div id="couch8.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch4.jpg" class="img img-thumbnail"/>
+                </div>
+            </a>
+      </div> 
 
-          <div class="grid-item">
-                <a href="#">
-                    <div class="thumbnail">
-                        <img src="images/couch4.jpg" class="img img-thumbnail"/>
 
-                    </div>
-                </a>
-          </div> 
+      <div id="couch9.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch.jpg" class="img img-thumbnail"/>
+                </div>
+            </a>
+      </div> 
+
+
+      <div id="couch10.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch2.jpg" class="img img-thumbnail"/>
+                </div>
+            </a>
+      </div> 
+
+
+      <div id="couch11.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch3.jpg" class="img img-thumbnail"/>
+                </div>
+            </a>
+      </div> 
+
+
+      <div id="couch12.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/bed.jpg" class="img img-thumbnail"/>
+
+                </div>
+            </a>
+    </div>
+
+      <div id="couch13.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch4.jpg" class="img img-thumbnail"/>
+
+                </div>
+            </a>
+      </div> 
+
+      <div id="couch14.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch.jpg" class="img img-thumbnail"/>
+
+                </div>
+            </a>
+      </div> 
+
+
+      <div id="couch15.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch2.jpg" class="img img-thumbnail"/>
+
+                </div>
+            </a>
+      </div> 
+
+
+      <div id="couch16.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch3.jpg" class="img img-thumbnail"/>
+
+                </div>
+            </a>
+      </div> 
+
+      <div id="couch17.jpg" class="grid-item">
+            <a href="#">
+                <div class="thumbnail">
+                    <img src="images/couch4.jpg" class="img img-thumbnail"/>
+
+                </div>
+            </a>
+      </div> 
 
 
     </div> <!-- /.row -->
@@ -411,8 +430,9 @@
     
 <!-- End #store-info content -->
 
-</div> <!-- /#content-wrapper -->    
-    
+ </div> <!-- /#content-wrapper -->   
+  
+<!-- TODO decide if I need this or not -->    
 <div hidden class="before-footer-container container-fluid">
     <div class="row">
         <div "col-xs-12 col-sm-12 col-md-12 col-lg-12">
