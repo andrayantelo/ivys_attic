@@ -11,10 +11,73 @@ function IvyApp($grid) {
     this.$menuArrow = $('.toggle-arrow');
     this.$menuFooter = $('.menu-footer');
     
+    this.$brandLink = $('#brand-link');
+    
+    // Footer links
+    this.$aboutUsLink = $('#about-us-link');
+    this.$hoursLocationLink = $('#hours-location-link');
+    this.$contactUsLink = $('#contact-us-link');
+    this.$homeLink = $('#home-link');
+    
+    this.$contentWrapper = $('#content-wrapper');
+    
+    // Page sections
+    this.$mainContent = $('#main-content');
+    this.$storeInfoContent = $('#about-us-content');
+    this.$contactUsContent = $('#contact-us-content');
     
     // Click handlers
     this.$menuArrow.click(this.toggleFooterMenu);
+    // About Us link
+    this.$aboutUsLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$storeInfoContent);
+    }.bind(this));
+    
+    // Hours & Location link
+    this.$hoursLocationLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$contactUsContent);
+    }.bind(this));
+    
+    // Contact Us Link
+    this.$contactUsLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$contactUsContent);
+    }.bind(this));
+    
+    // Home Link (Ivy's Attic Brand Link TODO add Home link in //footer)
+    
+    this.$homeLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$mainContent);
+    }.bind(this));
+    
+    this.$brandLink.click(function () {
+        this.hideContent();
+        this.showDiv(this.$mainContent);
+    }.bind(this));
+    
 }
+
+IvyApp.prototype.hideContent = function () {
+    // Hide all content divs
+    "use strict";
+    var div;
+    $('.content-div').each(function () {
+        $(this).hide();
+    });
+};
+
+IvyApp.prototype.showDiv = function (divToShow) {
+    "use strict";
+    divToShow.show();
+};
+
+IvyApp.prototype.hideDiv = function (divToHide) {
+    "use strict";
+    divToHide.hide();
+};
 
 IvyApp.prototype.initFirebase = function () {
     "use strict";
