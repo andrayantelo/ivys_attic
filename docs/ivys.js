@@ -60,9 +60,7 @@ var emptyProductState = function (params) {
         // product tags eg 'tag-id' : 'tag-name'
         tags: {},
         // Collection name
-        collection: params.collection,
-        // Favorite status
-        favorite: false //true or false
+        collection: params.collection
     };
     
 };
