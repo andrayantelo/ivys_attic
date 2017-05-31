@@ -83,7 +83,9 @@ Product.prototype.removeTag = function (tagId) {
     // Remove tag associated with product from product's state
     "use strict";
     var self = this;
-    delete self.state.tags[tagId];
+    if (self.state.tags[tagId]) {
+        delete self.state.tags[tagId];
+    }
 };
 
 // Product Collection Class
